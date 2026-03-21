@@ -38,7 +38,7 @@ epsilon = 1.0 # exploration rate
 
 # training loop 
 
-for epsilon in range(500):
+for epsilon in range(50):
 
     state, _ = env.reset()
     done = False 
@@ -83,3 +83,6 @@ for epsilon in range(500):
         state = next_state
         done = terminated or truncated
         
+    
+    print("Episode: ", epsilon,
+          "Total reward: ", total_reward)
